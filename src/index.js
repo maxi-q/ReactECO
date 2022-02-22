@@ -1,10 +1,33 @@
 import React from 'react';
-import ReactDOM  from 'react-dom';
+import { render } from "react-dom";
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/App.css'
 
-ReactDOM.render(
-    <App/>,
-  document.getElementById('root')
+import {Route, Routes} from "react-router";
+import MainWindow from "./pages/MainWindow";
+import RegistrationWindow from "./pages/RegistrationWindow";
+import {BrowserRouter} from "react-router-dom";
+
+const rootElement = document.getElementById("root");
+
+render(
+    <BrowserRouter className="App">
+        <Routes>
+            <Route path="/" element={<App />}>
+                <Route path="MainWindow"  element={<MainWindow/>}/>
+                <Route path="RegistrationWindow" className="registrationCard" element={<div className="registrationCard"><RegistrationWindow/></div>}/>
+                <Route
+                    path="*"
+                    element={
+                        <main style={{ padding: "1rem" }}>
+                            <p>Ошибка!</p>
+                        </main>
+                    }
+                />
+            </Route>
+        </Routes>
+    </BrowserRouter>,
+    rootElement
 );
 

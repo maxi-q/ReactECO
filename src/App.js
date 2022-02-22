@@ -1,24 +1,19 @@
-import React from 'react';
-import './styles/App.css';
-import {
-    BrowserRouter,
-    Routes,
-    Route
-} from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import React from "react";
 
-import MainWindow from "./pages/MainWindow";
-import RegistrationWindow from "./pages/RegistrationWindow";
-
-
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="MainWindow" element={<MainWindow/>}/>
-          <Route path="RegistrationWindow" element={<RegistrationWindow/>}/>
-      </Routes>
-    </BrowserRouter>
-  )
+export default function App() {
+    return (
+        <div className="App">
+            <nav
+                style={{
+                    borderBottom: "solid 1px",
+                    paddingBottom: "1rem"
+                }}
+            >
+                <Link to="/MainWindow">MainWindow</Link> |{" "}
+                <Link to="/RegistrationWindow">RegistrationWindow</Link>
+            </nav>
+            <Outlet />
+        </div>
+    );
 }
-export default App;

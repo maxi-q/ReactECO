@@ -1,11 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const MainWindow = () => {
     return (
-        <div>
-            <h1>MainWindow</h1>
-        </div>
-    )
+        <h1 className="registrationCard">ОСНОВНАЯ СТРАНИЦА</h1>
+    );
 }
 
 export default MainWindow;
