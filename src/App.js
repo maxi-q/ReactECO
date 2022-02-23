@@ -11,7 +11,7 @@ export default function App() {
                 }}
             >
                 <Link to="/MainWindow">MainWindow</Link> |{" "}
-                <Link to="/RegistrationWindow">RegistrationWindow</Link>
+                <Link to="/login">Регистрация</Link>
             </nav>
             <Outlet />
         </div>

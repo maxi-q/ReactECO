@@ -6,28 +6,34 @@ import './styles/App.css'
 
 import {Route, Routes} from "react-router";
 import MainWindow from "./pages/MainWindow";
-import RegistrationWindow from "./pages/RegistrationWindow";
+import Login from "./pages/Login";
 import {BrowserRouter} from "react-router-dom";
 
 const rootElement = document.getElementById("root");
 
+function Main() {
+    return (
+        <BrowserRouter className="App">
+            <Routes>
+                <Route path="/" element={<App />}>
+                    <Route path="MainWindow"  element={<MainWindow/>}/>
+                    <Route path="login" className="registrationCard"  element={<div className="registrationCard"><Login/></div>}/>
+                    <Route
+                        path="*"
+                        element={
+                            <main style={{ padding: "1rem" }}>
+                                <p>Ошибка!</p>
+                            </main>
+                        }
+                    />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
+}
+
 render(
-    <BrowserRouter className="App">
-        <Routes>
-            <Route path="/" element={<App />}>
-                <Route path="MainWindow"  element={<MainWindow/>}/>
-                <Route path="RegistrationWindow" className="registrationCard" element={<div className="registrationCard"><RegistrationWindow/></div>}/>
-                <Route
-                    path="*"
-                    element={
-                        <main style={{ padding: "1rem" }}>
-                            <p>Ошибка!</p>
-                        </main>
-                    }
-                />
-            </Route>
-        </Routes>
-    </BrowserRouter>,
+    <Main />,
     rootElement
 );
 
