@@ -1,7 +1,6 @@
 import {FormControl, InputGroup} from "react-bootstrap";
 import React from "react";
 
-
 const Input = (props) => {
 
     // noinspection JSUnresolvedVariable

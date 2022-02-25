@@ -6,8 +6,9 @@ import './styles/App.css'
 
 import {Route, Routes} from "react-router";
 import MainWindow from "./pages/MainWindow";
-import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 import {BrowserRouter} from "react-router-dom";
+import LogIn from "./pages/LogIn";
 
 const rootElement = document.getElementById("root");
 
@@ -17,7 +18,8 @@ function Main() {
             <Routes>
                 <Route path="/" element={<App />}>
                     <Route path="MainWindow"  element={<MainWindow/>}/>
-                    <Route path="login" className="registrationCard"  element={<div className="registrationCard"><Login/></div>}/>
+                    <Route path="signUp" className="registrationCard"  element={<div className="registrationCard"><SignUp/></div>}/>
+                    <Route path="logIn" className="registrationCard"  element={<div className="registrationCard"><LogIn/></div>}/>
                     <Route
                         path="*"
                         element={

@@ -3,8 +3,9 @@ import {Button, Card} from 'react-bootstrap/esm/index';
 import httpPost from "../config/Requests";
 import Input from "../components/Input";
 import {emailValid, nameValid, passwordValid, rePasswordValid, rePasswordValidForPassword} from "../config/Validators";
+import {useNavigate} from "react-router";
 
-const Login = (props) => {
+const SignUp = () => {
     const [email, setEmail] = useState('');
     const [emailDirty, setEmailDirty] = useState(false);
     const [emailError, setEmailError] = useState('Емейл не может быть пустым');
@@ -22,6 +23,8 @@ const Login = (props) => {
     const [name, setName] = useState('');
 
     const [formValid, setFormValid] = useState(false);
+
+    let navigate = useNavigate();
 
     useEffect(() => {
         if(emailError || passwordError || nameError || rePasswordError){
@@ -71,11 +74,11 @@ const Login = (props) => {
                     {(rePasswordDirty && rePasswordError) && <div style={{color:'red'}}>{rePasswordError}</div>}
                     <Input inputContent={{value:rePassword, handler: rePasswordHandler, name:"rePassword", blur: setRePasswordDirty, content: "Повторить пароль"}}/>
 
-                    <Button onClick={() => httpPost(name, password)} disabled={!formValid} className="ButtonRegister" variant="outline-primary">Регистрация</Button>{' '}
+                    <Button onClick={() => httpPost(name, password, navigate)} disabled={!formValid} className="ButtonRegister" variant="outline-primary">Регистрация</Button>{' '}
                 </div>
             </Card.Body>
         </Card>
     );
 };
 
-export default Login;
+export default SignUp;

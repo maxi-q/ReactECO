@@ -1,17 +1,19 @@
-import React, {useContext} from "react";
+import React from "react";
 
 
-export default async function httpPost(name, password) {
+export default async function httpPost(name, password, navigate) {
 
-    const requestOptions = {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+
+
+    const options = {
+        method: "POST",
+        headers: {"Content-type": "application/json"},
         body: JSON.stringify({
             name: name,
             password: password
         })
     };
-    const response = await fetch('https://reqres.in/api/posts', requestOptions);
-    const data = await response.json();
-    console.log(data.name);
+    await fetch('http://127.0.0.2:5000/api/registration', options)
+
+    navigate('/MainWindow');
 }
