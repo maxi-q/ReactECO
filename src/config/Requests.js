@@ -1,19 +1,19 @@
 import React from "react";
-
+import axios from 'axios';
 
 export default async function httpPost(name, password, navigate) {
 
-
-
-    const options = {
-        method: "POST",
-        headers: {"Content-type": "application/json"},
-        body: JSON.stringify({
-            name: name,
-            password: password
+    const body = JSON.stringify({
+        name: name,
+        password: password
+    });
+    axios
+        .post('http://127.0.0.2:5000/api/registration', body)
+        .then(response => {
+            console.log(response)
         })
-    };
-    await fetch('http://127.0.0.2:5000/api/registration', options)
-
+        .catch(error =>{
+            console.log(error)
+        })
     navigate('/MainWindow');
 }
