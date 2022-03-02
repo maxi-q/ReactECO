@@ -5,7 +5,7 @@ export default async function httpPost(name, password, navigate) {
 
     const options = {
         method: "POST",
-        headers: new Headers({'content-type': 'application/json'}),
+        headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify({
             'name': name,
             'password': password
