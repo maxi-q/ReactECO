@@ -11,7 +11,7 @@
 }
 
 .App {
-    width: 1000px;
+    width: 80%;
 }
 .registrationCard {
     display: flex;
@@ -25,4 +25,33 @@
 }
 .ButtonRegister {
     float: right;
+}
+.MainButtonBox {
+    background-color: #c6ffc5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.MainButton {
+    height: 75px;
+    min-width: 200px;
+}
+.Card {
+    padding-top: 50px;
+    min-height: 100px;
+    background-color: #c6ffc5;
+}
+.CardBlock {
+    margin: 10px 10px 0 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.CardImg {
+    width:100%;
+}
+.CardMainText {
+    font-size: 20px;
+    font-weight: 40px;
 }

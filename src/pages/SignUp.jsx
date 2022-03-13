@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Card} from 'react-bootstrap/esm/index';
-import httpPost from "../config/Requests";
+import {httpPost} from "../config/Requests";
 import Input from "../components/Input";
 import {emailValid, nameValid, passwordValid, rePasswordValid, rePasswordValidForPassword} from "../config/Validators";
 import {useNavigate} from "react-router";
