@@ -13,14 +13,19 @@ import Card from "./pages/Card";
 
 const rootElement = document.getElementById("root");
 
+
+
+
 function Main() {
     return (
         <BrowserRouter className="App">
             <Routes>
                 <Route path="/" element={<App />}>
-                    <Route path="MainWindow"  element={<MainWindow/>}>
-                        <Route path="Card" element={<Card/>}/>
-                    </Route>
+
+                        <Route path="MainWindow"  element={<MainWindow/>}>
+                            <Route path="Card" element={<Card/>}/>
+                        </Route>
+
                     <Route path="signUp" className="registrationCard"  element={<div className="registrationCard"><SignUp/></div>}/>
                     <Route path="logIn" className="registrationCard"  element={<div className="registrationCard"><LogIn/></div>}/>
                     <Route

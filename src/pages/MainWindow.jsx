@@ -1,8 +1,11 @@
-import React from 'react'
-import {Link, Outlet} from "react-router-dom";
+import React, {useContext} from 'react'
+import { Link, Outlet, useNavigate} from "react-router-dom";
 import Button from "react-bootstrap/Button";
+import ToCard from "../config/ToCard";
 
 const MainWindow = () => {
+    let navigate = useNavigate();
+
     return (
         <div>
             <nav
@@ -12,7 +15,7 @@ const MainWindow = () => {
                 }}
             >
                 <div className={"MainButtonBox"}>
-                    <Button variant="success" className={"MainButton"}>Факт!</Button>{' '}
+                    <Button onClick={ () => ToCard(navigate) } variant="success" className={"MainButton"}>Факт!</Button>{' '}
                     <Link to="./Card">Вход</Link>
 
                 </div>

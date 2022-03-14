@@ -20,15 +20,17 @@ export async function httpPost(name, password, navigate) {
 }
 
 export async function httpGet(URL) {
-    let data;
+
     const options = {
         method: "GET",
         headers: new Headers({'Content-Type': 'application/json'})
     }
-    return await fetch(URL, options)
-        .then((response) => response.json())
-        .then((json) =>  {
-            return json;
+    let response = await fetch(URL, options);
 
-        });
+    if (response.ok) {
+        return await response.json();
+
+    } else {
+        alert("Ошибка HTTP: " + response.status);
+    }
 }
