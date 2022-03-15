@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3ab615b-b5fb-4d31-944d-51aa66d7cb05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/Requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Requests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainWindow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainWindow.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="d3ab615b-b5fb-4d31-944d-51aa66d7cb05" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -350,7 +344,7 @@
       <workItem from="1646932681150" duration="4173000" />
       <workItem from="1647194326228" duration="4294000" />
       <workItem from="1647199301788" duration="60000" />
-      <workItem from="1647279907934" duration="4789000" />
+      <workItem from="1647279907934" duration="4857000" />
     </task>
     <task id="LOCAL-00001" summary="я ща этот cors ушатаю">
       <created>1646248178459</created>
@@ -366,11 +360,18 @@
       <option name="project" value="LOCAL" />
       <updated>1647195357159</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="hook на кнопке подпилить">
+      <created>1647284781301</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647284781301</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95926000" />
+    <option name="totallyTimeSpent" value="95994000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -383,9 +384,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="835" y="0" width="1732" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.87777776" visible="true" weight="0.15466352" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.87777776" visible="true" weight="0.15466352" />
       <window_info id="Structure" order="1" sideWeight="0.12222222" side_tool="true" visible="true" weight="0.15466352" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -400,7 +400,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32932165" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007622" side_tool="true" weight="0.31400436" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4992378" visible="true" weight="0.3107221" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4992378" visible="true" weight="0.3107221" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -412,7 +412,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="я ща этот cors ушатаю" />
     <MESSAGE value="postы делаю" />
-    <option name="LAST_COMMIT_MESSAGE" value="postы делаю" />
+    <MESSAGE value="hook на кнопке подпилить" />
+    <option name="LAST_COMMIT_MESSAGE" value="hook на кнопке подпилить" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/RegistrationWindow.css" />
