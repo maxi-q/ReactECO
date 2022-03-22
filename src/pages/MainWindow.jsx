@@ -1,10 +1,12 @@
-import React, {useContext} from 'react'
-import { Link, Outlet, useNavigate} from "react-router-dom";
+import React, { useContext } from 'react'
+import { Outlet, useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import ToCard from "../config/ToCard";
+import { IDContext } from "../hooks/GetPostID";
 
 const MainWindow = () => {
     let navigate = useNavigate();
+    const a = useContext(IDContext);
 
     return (
         <div>
@@ -15,8 +17,7 @@ const MainWindow = () => {
                 }}
             >
                 <div className={"MainButtonBox"}>
-                    <Button onClick={ () => ToCard(navigate) } variant="success" className={"MainButton"}>Факт!</Button>{' '}
-                    <Link to="./Card">Вход</Link>
+                    <Button onClick={ () => ToCard(navigate, a) } variant="success" className={"MainButton"}>Факт!</Button>{' '}
 
                 </div>
             </nav>

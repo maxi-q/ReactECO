@@ -1,8 +1,7 @@
-import React, {useContext} from 'react';
-import IDContext from "../hooks/GetPostID";
+import React from 'react';
 
-const ToCard = (navigate) => {
-    const a = useContext(IDContext).GetPostID;
+const ToCard = (navigate, a) => {
+    a.GetPostID()
     navigate('/MainWindow/Card')
 
 };
