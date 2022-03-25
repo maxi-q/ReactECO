@@ -10,6 +10,7 @@ import SignUp from "./pages/SignUp";
 import {BrowserRouter} from "react-router-dom";
 import LogIn from "./pages/LogIn";
 import Card from "./pages/Card";
+import StartWindow from "./pages/StartWindow";
 
 const rootElement = document.getElementById("root");
 
@@ -27,7 +28,9 @@ function Main() {
                         </Route>
 
                     <Route path="signUp" className="registrationCard"  element={<div className="registrationCard"><SignUp/></div>}/>
+
                     <Route path="logIn" className="registrationCard"  element={<div className="registrationCard"><LogIn/></div>}/>
+                    <Route path="StartWindow" className="StartWindow"  element={<div className="StartWindow"><StartWindow/></div>}/>
                     <Route
                         path="*"
                         element={

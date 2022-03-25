@@ -15,6 +15,7 @@ export default function App() {
                     }}
                 >
                     <Link to="/MainWindow">MainWindow</Link> |{" "}
+                    <Link to="/StartWindow">StartWindow</Link> |{" "}
                     <Link to="/SignUp">Регистрация</Link> |{" "}
                     <Link to="/logIn">Вход</Link>
                 </nav>
