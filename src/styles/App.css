@@ -60,12 +60,3 @@
     display: block;
     min-height: 1px;
 }
-.header .widther {
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-flow: row nowrap;
-    position: relative;
-    width: auto;
-    height: 75px;
-}
