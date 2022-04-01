@@ -1,62 +1,67 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App {
-    width: 80%;
+  width: 100%;
 }
 .registrationCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .register {
-    padding: 15px;
-    text-align: center;
+  padding: 15px;
+  text-align: center;
 }
 .ButtonRegister {
-    float: right;
+  float: right;
 }
 .MainButtonBox {
-    background-color: #c6ffc5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
+  background-color: #c6ffc5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
 }
 .MainButton {
-    height: 75px;
-    min-width: 200px;
+  height: 75px;
+  min-width: 200px;
 }
 .Card {
-    padding-top: 50px;
-    min-height: 100px;
-    background-color: #c6ffc5;
+  padding-top: 50px;
+  min-height: 100px;
+  background-color: #c6ffc5;
 }
 .CardBlock {
-    margin: 10px 10px 0 10px;
-    padding: 20px;
-    border-radius: 10px;
+  margin: 10px 10px 0 10px;
+  padding: 20px;
+  border-radius: 10px;
 }
 .CardImg {
-    width:100%;
+  width: 100%;
 }
 .CardMainText {
-    font-size: 20px;
-    font-weight: 40px;
+  font-size: 20px;
+  font-weight: 40px;
 }
-.block {
-    margin-bottom: 25px;
-    display: block;
-    min-height: 1px;
+.firstBlock {
+  background-color: #c6ffc5;
+  min-height: 100px;
+  padding: 20px 0 20px 0;
+}
+.OnlyImage {
+  width: 90%;
+}
+.BodyInCard {
+  background-color: rgb(196, 196, 196);
 }
