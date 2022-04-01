@@ -12,7 +12,7 @@ export default function App() {
             paddingBottom: "1rem"
           }}
         >
-          <Link to="/MainWindow">MainWindow</Link> |{" "}
+          <Link to="/MainWindow" style={{marginLeft:"20px"}}>MainWindow</Link> |{" "}
           <Link to="/StartWindow">StartWindow</Link> |{" "}
           <Link to="/SignUp">Регистрация</Link> | <Link to="/logIn">Вход</Link>
         </nav>

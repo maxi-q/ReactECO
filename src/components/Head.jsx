@@ -21,11 +21,7 @@ const Head = (props) => {
         </Nav>
         <Nav>
           <Nav.Link href="#profile">
-            <Image
-              src={props.imageSrc}
-              roundedCircle="true"
-              style={{ width: "50px" }}
-            ></Image>
+            <Image src={props.imageSrc} roundedCircle="true" style={{ width: "50px" }}/>
           </Nav.Link>
           <Nav>
             <Navbar>
