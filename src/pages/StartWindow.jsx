@@ -2,6 +2,8 @@ import React from "react";
 import Head from "../components/Head.jsx";
 import FirstBlock from "../components/FirstBlock";
 import SecondBlock from "../components/SecondBlock";
+import ThirdBlock from "../components/ThirdBlock";
+import FourthBlock from "../components/FourthBlock";
 
 const StartWindow = () => {
   const img =
@@ -12,6 +14,8 @@ const StartWindow = () => {
       <Head imageSrc={img}/>
       <FirstBlock/>
       <SecondBlock/>
+      <ThirdBlock/>
+      <FourthBlock/>
     </div>
   );
 };

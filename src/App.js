@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import React from "react";
 import ContextGetPostId from "./hooks/GetPostID";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Link to="/SignUp">Регистрация</Link> | <Link to="/logIn">Вход</Link>
         </nav>
         <Outlet />
+        <Footer/>
       </ContextGetPostId>
     </div>
   );

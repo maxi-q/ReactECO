@@ -59,9 +59,11 @@
   min-height: 100px;
   padding: 2em 0 2em 0;
 }
-.OnlyImage {
+.OnlyImage  {
+
+}
+ .Image {
   width: 100%;
-  height: auto;
 }
 .BodyInCard {
   background-color: rgb(196, 196, 196);
@@ -72,4 +74,19 @@
 }
 .fontSizeBody {
   font-size: 16px;
+}
+.SecDiv {
+  background-color: rgba(202, 138, 172, 0.58);
+  padding-bottom: 50px;
+}
+.CardImage {
+  height: 100px;
+  width: 100px;
+}
+.CardSecBlock {
+  margin: 40px 0 0 0;
+}
+.footer {
+  height: 100px;
+  background-color: aqua;
 }

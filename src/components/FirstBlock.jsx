@@ -8,8 +8,8 @@ const FirstBlock = () => {
         <div className="firstBlock">
             <Container>
                 <Row>
-                    <Col>
-                        <Image src={imgInBlock} className="OnlyImage"/>
+                    <Col className="OnlyImage">
+                        <Image src={imgInBlock} className="Image"/>
                     </Col>
                     <Col>
                         <Card
