@@ -22,13 +22,11 @@ function Main() {
         <BrowserRouter className="App">
             <Routes>
                 <Route path="/" element={<App />}>
-
+                    <Route path="/" element={<StartWindow />}/>
                         <Route path="MainWindow"  element={<MainWindow/>}>
                             <Route path="Card" element={<Card/>}/>
                         </Route>
-
                     <Route path="signUp" className="registrationCard"  element={<div className="registrationCard"><SignUp/></div>}/>
-
                     <Route path="logIn" className="registrationCard"  element={<div className="registrationCard"><LogIn/></div>}/>
                     <Route path="StartWindow" className="StartWindow"  element={<div className="StartWindow"><StartWindow/></div>}/>
                     <Route

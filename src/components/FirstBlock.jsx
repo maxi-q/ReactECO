@@ -1,15 +1,14 @@
 import React from 'react';
 import {Card, Col, Container, Image, Row} from "react-bootstrap";
+import animal from "../images/animal.jpg"
 
 const FirstBlock = () => {
-    const imgInBlock =
-        "https://s1.1zoom.ru/big3/136/Foxes_Glance_Foliage_536041_3000x2000.jpg";
     return (
         <div className="firstBlock">
             <Container>
                 <Row>
                     <Col className="OnlyImage">
-                        <Image src={imgInBlock} className="Image"/>
+                        <Image src={animal} className="Image"/>
                     </Col>
                     <Col>
                         <Card
@@ -24,10 +23,10 @@ const FirstBlock = () => {
 
                                 <Card.Body className="BodyInCard"
                                            style ={{
-                                               borderRadius:"10px"
+                                               borderRadius:"10px",
+                                               backgroundColor:"rgb(172,152,110)"
                                            }}>
                                     <Card.Text className={"fontSizeBody"}>
-
                                         Столь же велико, как и значение растений. Многие растения опыляются только животными, что животные
                                         играют большую роль и в распространении семян некоторых растений.
                                         К этому следует добавить, что животные наряду с бактериями принимают самое активное участие в

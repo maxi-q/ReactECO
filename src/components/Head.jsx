@@ -10,7 +10,7 @@ const Head = (props) => {
           style={{ maxHeight: "100px" }}
           navbarScroll
         >
-          <Navbar.Brand href="#home">ReactECO</Navbar.Brand>
+          <Navbar.Brand href="/StartWindow">ReactECO</Navbar.Brand>
           <NavDropdown title="Link">
             <NavDropdown.Item href="#action1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action2">Another action</NavDropdown.Item>

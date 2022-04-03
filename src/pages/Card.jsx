@@ -1,5 +1,5 @@
 import React from 'react';
-import animal from '../img/animal.jpg';
+import animal from '../images/animal.jpg';
 import TextBlock from "../components/TextBlock";
 
 const Card = () => {

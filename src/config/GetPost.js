@@ -11,7 +11,7 @@ export function GetPost() {
 
     httpGet('https://jsonplaceholder.typicode.com/posts/' + postID)
         .then(json => {
-            setTitle(json.title);
+            setTitle(json.id);
             setBody(json.body);
         });
     return {title, body}

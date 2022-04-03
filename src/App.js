@@ -2,9 +2,13 @@ import { Outlet, Link } from "react-router-dom";
 import React from "react";
 import ContextGetPostId from "./hooks/GetPostID";
 import Footer from "./components/Footer";
+import Head from "./components/Head";
 
 export default function App() {
-  return (
+    const img =
+    "https://img2.freepng.ru/20180411/vuw/kisspng-penrose-triangle-isometric-projection-optical-illu-isometric-5acd8b94703078.8028741215234200524595.jpg";
+
+    return (
     <div className="App">
       <ContextGetPostId>
         <nav
@@ -17,6 +21,7 @@ export default function App() {
           <Link to="/StartWindow">StartWindow</Link> |{" "}
           <Link to="/SignUp">Регистрация</Link> | <Link to="/logIn">Вход</Link>
         </nav>
+        <Head imageSrc={img}/>
         <Outlet />
         <Footer/>
       </ContextGetPostId>

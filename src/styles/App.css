@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 100px;
 }
 .register {
   padding: 15px;
@@ -38,7 +39,7 @@
   min-width: 200px;
 }
 .Card {
-  padding-top: 50px;
+  padding: 50px 0 30px 0;
   min-height: 100px;
   background-color: #c6ffc5;
 }
@@ -54,34 +55,50 @@
   font-size: 20px;
   font-weight: 40px;
 }
-.firstBlock {
-  background-color: #c6ffc5;
-  min-height: 100px;
-  padding: 2em 0 2em 0;
-}
 .OnlyImage  {
-
 }
  .Image {
   width: 100%;
+   border-radius: 50px;
+   margin: 10% 0;
 }
 .BodyInCard {
   background-color: rgb(196, 196, 196);
 }
 .fontSizeTitle {
-  font-size: 24px;
+  font-size: 36px;
   margin-left: 10px;
 }
 .fontSizeBody {
   font-size: 16px;
 }
+.firstBlock {
+  background-color: rgba(202, 149, 60, 0.58);
+  min-height: 100px;
+  padding: 2em 0 2em 0;
+}
 .SecDiv {
-  background-color: rgba(202, 138, 172, 0.58);
+  background-color: rgba(202, 182, 132, 0.58);
+  padding: 0 150px 50px 150px;
+}
+.ThirdDiv {
+  background-color: rgba(202, 182, 132, 0.58);
   padding-bottom: 50px;
 }
+.FourDiv {
+  background-color: rgba(202, 182, 132, 0.58);
+  padding-bottom: 50px;
+
+}
+.ProjectManDiv {
+  border-radius: 90px;
+  padding-bottom: 40px;
+  background-color: rgba(202, 84, 156, 0.58);
+}
+
 .CardImage {
-  height: 100px;
-  width: 100px;
+  height: 50%;
+  width: 50%;
 }
 .CardSecBlock {
   margin: 40px 0 0 0;
