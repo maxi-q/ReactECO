@@ -11,6 +11,13 @@ import {BrowserRouter} from "react-router-dom";
 import LogIn from "./pages/LogIn";
 import Card from "./pages/Card";
 import StartWindow from "./pages/StartWindow";
+import Profile from "./pages/Profile";
+import FAQ from "./pages/FAQ";
+import Reviews from "./pages/Reviews";
+import CallBack from "./pages/CallBack";
+import AboutUs from "./pages/AboutUs";
+import NewPost from "./pages/NewPost";
+import Friends from "./pages/Friends";
 
 const rootElement = document.getElementById("root");
 
@@ -28,7 +35,14 @@ function Main() {
                         </Route>
                     <Route path="signUp" className="registrationCard"  element={<div className="registrationCard"><SignUp/></div>}/>
                     <Route path="logIn" className="registrationCard"  element={<div className="registrationCard"><LogIn/></div>}/>
-                    <Route path="StartWindow" className="StartWindow"  element={<div className="StartWindow"><StartWindow/></div>}/>
+                    <Route path="StartWindow" element={<div><StartWindow/></div>}/>
+                    <Route path="Profile" element={<div><Profile/></div>}/>
+                    <Route path="FAQ" element={<div><FAQ/></div>}/>
+                    <Route path="Reviews" element={<div><Reviews/></div>}/>
+                    <Route path="CallBack" element={<div><CallBack/></div>}/>
+                    <Route path="AboutUs" element={<div><AboutUs/></div>}/>
+                    <Route path="NewPost" element={<div><NewPost/></div>}/>
+                    <Route path="Friends" element={<div><Friends/></div>}/>
                     <Route
                         path="*"
                         element={
