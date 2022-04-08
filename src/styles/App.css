@@ -13,6 +13,10 @@
 .App {
   width: 100%;
 }
+.HeadAvatar {
+  width: 50px;
+  border: 1px solid rgb(0, 0, 0);
+}
 .registrationCard {
   display: flex;
   flex-direction: column;
@@ -38,6 +42,20 @@
   height: 75px;
   min-width: 200px;
 }
+.StartButtonBox {
+  background-color: rgba(0 0 0 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+.StartButton {
+  background-color: #a16b19;
+  border-color: #8b4313;
+  height: 75px;
+  min-width: 400px;
+}
 .Card {
   padding: 50px 0 30px 0;
   min-height: 100px;
@@ -55,12 +73,13 @@
   font-size: 20px;
   font-weight: 40px;
 }
-.OnlyImage  {
+.OnlyImage {
 }
- .Image {
+.Image {
   width: 100%;
-   border-radius: 50px;
-   margin: 10% 0;
+  height: 100%;
+  border-radius: 50px;
+  margin: 0;
 }
 .BodyInCard {
   background-color: rgb(196, 196, 196);
@@ -102,6 +121,62 @@
 }
 .CardSecBlock {
   margin: 40px 0 0 0;
+}
+.ProfileImage {
+  display:flex;
+  float: top;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: bottom;
+}
+.ProfileBlock {
+  background-color: #c6ffc5;
+  padding: 0 10%;
+  min-height: 100px;
+}
+.Avatar {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid rgb(1 1 1);
+}
+.NameProfile {
+  margin-left: 115px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+}
+.HistoryBlock {
+  margin-top: 20px;
+  background-color: rgba(202, 149, 60, 0.0);
+  min-height: 100px;
+}
+.Histories {
+  background-color: rgba(219, 180, 50, 0.356);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 0 0 10px;
+  min-height: 10px;
+}
+.Histori {
+  background-color: rgba(45, 144, 201, 0.56);
+  border: 1px solid rgba(48, 150, 209, 0.56);
+  padding: 10px;
+  margin: 3px;
+}
+.RevardAva {
+  height: 50px;
+  width: 50px;
+}
+.RevardText {
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 15px;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
 }
 .footer {
   height: 100px;
