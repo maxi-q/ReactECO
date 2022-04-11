@@ -1,5 +1,6 @@
 import React from 'react';
-import {Card, Col, Container, Image, Row} from "react-bootstrap";
+import {Button, Card, Col, Container, Image, Row} from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import animal from "../images/animal.jpg"
 
 const FirstBlock = () => {
@@ -36,6 +37,11 @@ const FirstBlock = () => {
 
                                     </Card.Text>
                                 </Card.Body>
+                                <div className='StartButtonBox'>
+                                    <Link to="/MainWindow">
+                                           <Button className='StartButton' variant='danger'>Погнали!</Button>
+                                    </Link>
+                                </div>
                             </Card.Body>
                         </Card>
                     </Col>

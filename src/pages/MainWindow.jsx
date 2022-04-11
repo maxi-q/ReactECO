@@ -12,8 +12,7 @@ const MainWindow = () => {
     <div>
       <nav
         style={{
-          borderBottom: "solid 1px",
-          marginBottom: "1rem"
+          borderBottom: "solid 1px"
         }}
       >
         <div className={"MainButtonBox"}>
