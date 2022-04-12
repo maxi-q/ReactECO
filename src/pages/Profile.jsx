@@ -22,18 +22,11 @@ const Profile = () => {
     const img = "https://i.pinimg.com/originals/4b/ee/62/4bee62fe59c6c7ff150186a4318e3180.jpg";
     const ava = "https://funart.pro/uploads/posts/2021-07/1627167714_14-funart-pro-p-kot-v-pidzhake-zhivotnie-krasivo-foto-17.jpg";
     const revards = 10;
-    const revard = [
-        {
-            "title": "увидеть зяблика",
-            "ava": ava,
-            "body": "посмотреть на зяблика и увидеть в его глазах звезды"
-        },
-        {
-            "title": "поймать страуса",
-            "ava": ava,
-            "body": "найти страуса и поймать его"
-        }
-    ]
+    const revard = []
+    const Profiles = require("../data.json")
+    const Profile = Profiles[0]
+    console.log(Profile)
+
     const histories = [
         {
             "ava": ava, 
@@ -61,8 +54,8 @@ const Profile = () => {
                 <Stack direction="horizontal" gap={3}>
                     <Image src={ava} className="Avatar"/>
                     <p className="NameProfile">
-                        <h3>Никнейм</h3>
-                        Достижения: {revards}/42
+                        <h3>{Profile.name}</h3>
+                        Достижения: {Profile.achivements.length}/42
                     </p>
                 </Stack>
                 <div className="RevardBlock">
