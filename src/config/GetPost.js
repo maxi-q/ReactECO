@@ -1,6 +1,6 @@
-import React, {useContext, useState} from 'react';
-import {httpGet} from "./Requests";
-import {IDContext} from "../hooks/GetPostID.jsx"
+import React, { useContext, useState } from 'react';
+import { httpGet } from "./Requests";
+import { IDContext } from "../hooks/GetPostID.jsx"
 
 
 export function GetPost() {
@@ -11,8 +11,8 @@ export function GetPost() {
 
     httpGet('https://jsonplaceholder.typicode.com/posts/' + postID)
         .then(json => {
-            setTitle(json.id);
+            setTitle(json.title);
             setBody(json.body);
         });
-    return {title, body}
+    return { title, body }
 }

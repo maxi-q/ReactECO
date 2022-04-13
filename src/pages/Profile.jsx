@@ -3,17 +3,21 @@ import { Image, Stack } from 'react-bootstrap'
 import Histori from '../components/Histori';
 import Revard from '../components/Revard'
 
-const Getrevard = (block) => {
+const GetAchivement = (_myAchivements) => {
     let a=[]
-    block.forEach(el => {
-        a.push(<Revard value={{avatar: el.ava, title:el.title, body: el.body}}/>)
+    const Achivements = require("../achivements.json")
+    _myAchivements.forEach(el => {
+        const Achivement = Achivements.find(item => item.id === +el)
+        a.push(<Revard value={{avatar: Achivement.data.ava, title:Achivement.data.title, body: Achivement.data.body}}/>)
     });
     return a;
 }
-const GetHistories = (block) => {
+const GetHistories = (_myHistory) => {
     let a=[]
-    block.forEach(el => {
-        a.push(<Histori value={{avatar: el.ava, title:el.title, body: el.body}}/>)
+    const Achivements = require("../items.json")
+    _myHistory.forEach(el => {
+        const Achivement = Achivements.find(item => item.id === +el)
+        a.push(<Histori value={{avatar: Achivement.data.ava, title:Achivement.data.title, body: ""}}/>)
     });
     return a;
 }
@@ -24,29 +28,10 @@ const Profile = () => {
     const revards = 10;
     const revard = []
     const Profiles = require("../data.json")
-    const Profile = Profiles[0]
-    console.log(Profile)
+    const Profile = Profiles.find(item => item.UUID === "wasd333")
 
-    const histories = [
-        {
-            "ava": ava, 
-            "title":"Волк",
-            "body": ""
-        },
-        {
-            "ava": ava, 
-            "title":"Волколак",
-            "body": ""
-        }, 
-        {
-            "ava": ava, 
-            "title":"Листик",
-            "body": ""
-        },
-    ]
-
-    let Revards = Getrevard(revard)
-    let Histories = GetHistories(histories)
+    let Revards = GetAchivement(Profile.achivements.split(' '));
+    let Histories = GetHistories(Profile.unlocked_items.split(' '))
     return (
         <div>
             <Image src={img} className="ProfileImage"/>
@@ -55,7 +40,7 @@ const Profile = () => {
                     <Image src={ava} className="Avatar"/>
                     <p className="NameProfile">
                         <h3>{Profile.name}</h3>
-                        Достижения: {Profile.achivements.length}/42
+                        Достижения: {Profile.achivements.split(' ').length}/42
                     </p>
                 </Stack>
                 <div className="RevardBlock">

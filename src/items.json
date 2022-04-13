@@ -1,0 +1,39 @@
+[{
+        "id": 0,
+        "data": {
+            "Image": "https://www.meme-arsenal.com/memes/9fe6cc1c35cad75d7419f6fb81e36403.jpg",
+            "ava": "https://www.meme-arsenal.com/memes/9fe6cc1c35cad75d7419f6fb81e36403.jpg",
+            "title": "Волк",
+            "body": [{
+                    "color": "rgb(0 0 0)",
+                    "subtitle": "Волки очень молодцы",
+                    "text": "ляляля тополя"
+                },
+                {
+                    "color": "rgb(150 100 145)",
+                    "subtitle": "Волки могут тебя съесть",
+                    "text": "ляляля АЙ укусил((("
+                }
+            ]
+        }
+    },
+    {
+        "id": 1,
+        "data": {
+            "Image": "https://www.meme-arsenal.com/memes/9fe6cc1c35cad75d7419f6fb81e36403.jpg",
+            "ava": "https://www.meme-arsenal.com/memes/9fe6cc1c35cad75d7419f6fb81e36403.jpg",
+            "title": "Корова",
+            "body": [{
+                    "color": "rgb(200 200 200)",
+                    "subtitle": "Корова очень молодцы",
+                    "text": "ляляля тополя"
+                },
+                {
+                    "color": "rgb(100 180 145)",
+                    "subtitle": "Корова могут тебя съесть",
+                    "text": "ляляля АЙ укусил((("
+                }
+            ]
+        }
+    }
+]
