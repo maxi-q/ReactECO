@@ -3,6 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import ToCard from "../config/ToCard";
 import { IDContext } from "../hooks/GetPostID";
+import { GetPost } from "../config/GetPost";
 
 const MainWindow = () => {
   let navigate = useNavigate();
@@ -17,7 +18,7 @@ const MainWindow = () => {
       >
         <div className={"MainButtonBox"}>
           <Button
-            onClick={() => ToCard(navigate, a)}
+            onClick={() => {ToCard(navigate, a)}}
             variant="success"
             className={"MainButton"}
           >

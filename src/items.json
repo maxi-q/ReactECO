@@ -5,7 +5,7 @@
             "ava": "https://www.meme-arsenal.com/memes/9fe6cc1c35cad75d7419f6fb81e36403.jpg",
             "title": "Волк",
             "body": [{
-                    "color": "rgb(0 0 0)",
+                    "color": "rgb(200 100 150)",
                     "subtitle": "Волки очень молодцы",
                     "text": "ляляля тополя"
                 },
@@ -26,6 +26,49 @@
             "body": [{
                     "color": "rgb(200 200 200)",
                     "subtitle": "Корова очень молодцы",
+                    "text": "ляляля тополя"
+                },
+                {
+                    "color": "rgb(100 180 145)",
+                    "subtitle": "Корова могут тебя съесть",
+                    "text": "ляляля АЙ укусил((("
+                }
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "data": {
+            "Image": "https://www.meme-arsenal.com/memes/9fe6cc1c35cad75d7419f6fb81e36403.jpg",
+            "ava": "https://www.meme-arsenal.com/memes/9fe6cc1c35cad75d7419f6fb81e36403.jpg",
+            "title": "Лапа",
+            "body": [{
+                    "color": "rgb(200 200 200)",
+                    "subtitle": "2",
+                    "text": "ляляля тополя"
+                },
+                {
+                    "color": "rgb(100 180 145)",
+                    "subtitle": "Корова могут тебя съесть",
+                    "text": "ляляля АЙ укусил((("
+                },
+                {
+                    "color": "rgb(100 180 145)",
+                    "subtitle": "Корова могут тебя съесть",
+                    "text": "ляляля АЙ укусил((("
+                }
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "data": {
+            "Image": "https://www.meme-arsenal.com/memes/9fe6cc1c35cad75d7419f6fb81e36403.jpg",
+            "ava": "https://www.meme-arsenal.com/memes/9fe6cc1c35cad75d7419f6fb81e36403.jpg",
+            "title": "Ярик",
+            "body": [{
+                    "color": "rgb(200 200 200)",
+                    "subtitle": "3",
                     "text": "ляляля тополя"
                 },
                 {

@@ -3,13 +3,15 @@ import React, {useState, createContext} from 'react';
 export const IDContext = createContext();
 
 const ContextGetPostId = (props) => {
-    const [postID, setPostID] = useState(11);
+    const [postID, setPostID] = useState(0);
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
     }
     const GetPostID = () => {
-        setPostID(getRandomInt(1, 100));
+        const num =getRandomInt(0, 4)
+        setPostID(num);
+        return num
     };
 
     const value = {

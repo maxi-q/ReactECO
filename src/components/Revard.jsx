@@ -7,7 +7,7 @@ const Revard = (props) => {
             <Stack direction="horizontal" gap={0}>
                 <Image src={props.value.avatar} className="RevardAva"/>
                 <p className="RevardText">
-                    <h5>{props.value.title}</h5>
+                    <h5 >{props.value.title}</h5>
                     {props.value.body}
                 </p>
             </Stack>

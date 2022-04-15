@@ -1,9 +1,9 @@
-import React from 'react';
+import AddItem from '../config/AddItem.js'
 
-const ToCard = (navigate, a) => {
-    a.GetPostID()
+const ToCard = async(navigate, a) => {
+    let PostID = a.GetPostID()
     navigate('/MainWindow/Card')
-
+    AddItem(PostID)
 };
 
 export default ToCard;

@@ -2,6 +2,9 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown, Image } from "react-bootstrap";
 
 const Head = (props) => {
+  const Profiles = require("../data.json")
+  const Profile = Profiles.find(item => item.UUID === "wasd333")
+
   return (
       <Navbar bg="light" variant="light">
         <Container>
@@ -37,8 +40,8 @@ const Head = (props) => {
                         marginBottom: "0px"
                       }}
                   >
-                    Профиль <br />
-                    Name Surname
+                    Профиль: <br />
+                    {Profile.name}
                   </p>
                 </Nav.Link>
               </Navbar>

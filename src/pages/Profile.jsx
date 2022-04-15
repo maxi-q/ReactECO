@@ -6,12 +6,15 @@ import Revard from '../components/Revard'
 const GetAchivement = (_myAchivements) => {
     let a=[]
     const Achivements = require("../achivements.json")
+
+    
     _myAchivements.forEach(el => {
         const Achivement = Achivements.find(item => item.id === +el)
         a.push(<Revard value={{avatar: Achivement.data.ava, title:Achivement.data.title, body: Achivement.data.body}}/>)
     });
     return a;
 }
+
 const GetHistories = (_myHistory) => {
     let a=[]
     const Achivements = require("../items.json")
@@ -30,8 +33,8 @@ const Profile = () => {
     const Profiles = require("../data.json")
     const Profile = Profiles.find(item => item.UUID === "wasd333")
 
-    let Revards = GetAchivement(Profile.achivements.split(' '));
-    let Histories = GetHistories(Profile.unlocked_items.split(' '))
+    const Revards = GetAchivement(Profile.achivements.split(' '));
+    const Histories = GetHistories(Profile.unlocked_items.split(' '))
     return (
         <div>
             <Image src={img} className="ProfileImage"/>
