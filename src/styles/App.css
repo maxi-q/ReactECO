@@ -1,245 +1,253 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App {
-    width: 100%;
+  width: 100%;
 }
 
 .HeadAvatar {
-    width: 50px;
-    border: 1px solid rgb(0, 0, 0);
+  width: 50px;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .registrationCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
 .register {
-    padding: 15px;
-    text-align: center;
+  padding: 15px;
+  text-align: center;
 }
 
 .ButtonRegister {
-    float: right;
+  float: right;
 }
 
 .MainButtonBox {
-    background-color: #c6ffc5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
+  background-color: #c6ffc5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
 }
 
 .MainButton {
-    height: 75px;
-    min-width: 200px;
+  height: 75px;
+  min-width: 200px;
 }
 
 .StartButtonBox {
-    background-color: rgba(0, 0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
 }
 
 .StartButton {
-    background-color: #a16b19;
-    border-color: #8b4313;
-    height: 75px;
-    min-width: 400px;
+  background-color: #a16b19;
+  border-color: #8b4313;
+  height: 75px;
+  min-width: 400px;
 }
 
 .Card {
-    padding: 50px 0 30px 0;
-    min-height: 100px;
-    background-color: #c6ffc5;
-    margin: 0 10%;
-    border-radius: 50px;
+  padding: 50px 0 30px 0;
+  min-height: 100px;
+  background-color: #c6ffc5;
+  margin: 0 10%;
+  border-radius: 50px;
 }
 
 .CardBlock {
-    margin: 10px 10px 0 10px;
-    padding: 20px;
-    border-radius: 10px;
+  margin: 10px 10px 0 10px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .CardImg {
-    display: flex;
-    float: top;
-    width: 96%;
-    height: 400px;
-    margin: 0 2%;
-    border-radius: 0;
-    object-fit: cover;
-    object-position: bottom;
+  display: flex;
+  float: top;
+  width: 96%;
+  height: 400px;
+  margin: 0 2%;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .CardMainText {
-    font-size: 20px;
-    font-weight: 40px;
+  font-size: 20px;
+  font-weight: 40px;
 }
 
 .OnlyImage {
-    background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .Image {
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    margin: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  margin: 0;
 }
 
 .BodyInCard {
-    background-color: rgb(196, 196, 196);
+  background-color: rgb(196, 196, 196);
 }
 
 .fontSizeTitle {
-    font-size: 36px;
-    margin-left: 10px;
+  font-size: 36px;
+  margin-left: 10px;
 }
 
 .fontSizeBody {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .firstBlock {
-    background-color: rgba(202, 149, 60, 0.58);
-    min-height: 100px;
-    padding: 2em 0 2em 0;
+  background-color: rgba(202, 149, 60, 0.58);
+  min-height: 100px;
+  padding: 2em 0 2em 0;
 }
 
 .SecDiv {
-    background-color: rgba(202, 182, 132, 0.58);
-    padding: 0 150px 50px 150px;
+  background-color: rgba(202, 182, 132, 0.58);
+  padding: 0 150px 50px 150px;
 }
 
 .ThirdDiv {
-    background-color: rgba(202, 182, 132, 0.58);
-    padding-bottom: 50px;
+  background-color: rgba(202, 182, 132, 0.58);
+  padding-bottom: 50px;
 }
 
 .FourDiv {
-    background-color: rgba(202, 182, 132, 0.58);
-    padding-bottom: 50px;
+  background-color: rgba(202, 182, 132, 0.58);
+  padding-bottom: 50px;
 }
 
 .ProjectManDiv {
-    border-radius: 90px;
-    padding-bottom: 40px;
-    background-color: rgba(202, 84, 156, 0.58);
+  border-radius: 90px;
+  padding-bottom: 40px;
+  background-color: rgba(202, 84, 156, 0.58);
 }
 
 .CardImage {
-    height: 50%;
-    width: 50%;
+  height: 50%;
+  width: 50%;
 }
 
 .CardSecBlock {
-    margin: 40px 0 0 0;
+  margin: 40px 0 0 0;
 }
 
 .ProfileImage {
-    display: flex;
-    float: top;
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    object-position: bottom;
+  display: flex;
+  float: top;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .ProfileBlock {
-    background-color: #c6ffc5;
-    padding: 0 10%;
-    min-height: 100px;
+  background-color: #c6ffc5;
+  padding: 0 10%;
+  min-height: 100px;
 }
 
 .Avatar {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 1px solid rgb(1 1 1);
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid rgb(1 1 1);
 }
 
 .NameProfile {
-    margin-left: 115px;
-    font-size: 14px;
-    line-height: 18px;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
+  margin-left: 115px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
 }
 
 .RevardBlock {
-    margin-top: 20px;
-    background-color: rgba(202, 149, 60, 0.0);
-    min-height: 100px;
+  margin-top: 20px;
+  background-color: rgba(202, 149, 60, 0);
+  min-height: 100px;
 }
 
 .Revards {
-    background-color: rgba(219, 180, 50, 0.356);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 0 0 0 10px;
-    min-height: 10px;
+  background-color: rgba(219, 180, 50, 0.356);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 0 0 10px;
+  min-height: 10px;
 }
 
 .Revard {
-    background-color: rgba(45, 144, 201, 0.56);
-    border: 1px solid rgba(48, 150, 209, 0.56);
-    padding: 10px;
+  background-color: rgba(45, 144, 201, 0.56);
+  border: 1px solid rgba(48, 150, 209, 0.56);
+  padding: 10px;
 }
 
 .RevardAva {
-    height: 50px;
-    width: 50px;
+  height: 50px;
+  width: 50px;
 }
 
 .RevardText {
-    margin-left: 5px;
-    font-size: 14px;
-    line-height: 15px;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 15px;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
 }
 
 .HistoryBlock {
-    margin: 30px 0 0 0;
-    padding-bottom: 10px;
+  margin: 30px 0 0 0;
+  padding-bottom: 10px;
 }
 
 .Histories {
-    margin-left: 10px;
-    min-height: 30px;
-    border-radius: 10px;
-    background-color: #eac5ff;
-    padding: 10px;
+  margin-left: 10px;
+  min-height: 30px;
+  border-radius: 10px;
+  background-color: #eac5ff;
+  padding: 10px;
 }
 
 .Histori {
-    min-height: 10px;
-    background-color: rgba(175, 53, 53, 0.555);
-    border: 1px solid rgba(180, 35, 35, 0.753);
-    padding: 10px;
+  min-height: 10px;
+  background-color: rgba(175, 53, 53, 0.555);
+  border: 1px solid rgba(180, 35, 35, 0.753);
+  padding: 10px;
 }
-
+.ReviewsImage {
+  height: 400px;
+}
 .footer {
-    height: 100px;
-    background-color: aqua;
+  height: 100px;
+  background-color: aqua;
+}
+.Reviews p {
+  font: italic small-caps 12px/2 cursive;
+}
+.Reviews h3 {
+  font: small-caps bold 24px/1 sans-serif;
 }

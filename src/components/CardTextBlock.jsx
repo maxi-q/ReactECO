@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
+import React from "react";
 import { GetPost } from "../config/GetPost";
-import TextBlock from './TextBlock'
+import TextBlock from "./TextBlock";
 
 const razwod = (body) => {
-    const a=[]
-    body.forEach(el => {
-        a.push(<TextBlock value={{color: el.color, title: el.subtitle, text: el.text}}/>)
-    });
-    return a
-}
+  const content = body.map((post) => (
+    <TextBlock
+      value={{ color: post.color, title: post.subtitle, text: post.text }}
+    />
+  ));
+  return content;
+};
 
 const CardTextBlock = () => {
-    const post = GetPost()
-    const a = razwod(post.post.data.body)
-    return (
-        <div>
-            <img src={post.post.data.Image} className={"CardImg"} alt="1111"/>
-            { a }
-        </div>
-    );
+  const post = GetPost();
+  const a = razwod(post.post.data.body);
+  return (
+    <div>
+      <img src={post.post.data.Image} className={"CardImg"} alt="1111" />
+      {a}
+    </div>
+  );
 };
 
 export default CardTextBlock;
