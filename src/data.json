@@ -1,14 +1,14 @@
 [{
         "UUID": "qwe1123",
         "name": "maxi-q",
-        "achivements": "1 2 2 0",
+        "achivements": "",
         "friends": "AlexeyZ",
         "unlocked_items": "1 2"
     },
     {
         "UUID": "wasd333",
         "name": "AlexeyZ",
-        "achivements": "1 0 3 2 4 5",
+        "achivements": "",
         "friends": "maxi-q",
         "unlocked_items": "2 1"
     }

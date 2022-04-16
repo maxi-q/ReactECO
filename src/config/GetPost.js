@@ -1,5 +1,4 @@
 import { useContext, useState, useEffect } from 'react';
-import { httpGet } from "./Requests";
 import { IDContext } from "../hooks/GetPostID.jsx"
 
 const GETMEPOSTPLEASE = async(postID) => {

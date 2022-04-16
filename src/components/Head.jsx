@@ -16,7 +16,7 @@ const Head = (props) => {
         >
           <Navbar.Brand>
             <Link
-              to="/Profile"
+              to="/MainWindow"
               style={{ textDecoration: "none", color: "black" }}
             >
               ReactECO

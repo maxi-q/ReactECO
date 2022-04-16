@@ -3,11 +3,11 @@ import { Image, Stack } from "react-bootstrap";
 import Histori from "../components/Histori";
 import Revard from "../components/Revard";
 
-const GetAchivement = (_myAchivements) => {
+const GetAchivement = (myAchivements) => {
   let a = [];
   const Achivements = require("../achivements.json");
 
-  _myAchivements.forEach((el) => {
+  myAchivements.forEach((el) => {
     const Achivement = Achivements.find((item) => item.id === +el);
     a.push(
       <Revard
@@ -22,10 +22,11 @@ const GetAchivement = (_myAchivements) => {
   return a;
 };
 
-const GetHistories = (_myHistory) => {
+const GetHistories = (myHistory) => {
   let a = [];
   const Achivements = require("../items.json");
-  _myHistory.forEach((el) => {
+  myHistory.reverse()
+  myHistory.forEach((el) => {
     const Achivement = Achivements.find((item) => item.id === +el);
     a.push(
       <Histori

@@ -11,7 +11,8 @@ const AddInProfile = (num) => {
 }
 
 const AddItem = (PostID) => {
-    CheckItem(PostID) ? console.log("уже в профиле") : AddInProfile(PostID)
+    let a
+    CheckItem(PostID) ? a = 0 : AddInProfile(PostID)
 }
 
 export default AddItem;

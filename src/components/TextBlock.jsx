@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import GiveRevard from '../config/GiveRevard';
+import { IDContext } from "../hooks/GetPostID.jsx"
+
+const CheckItem = (item) => {
+    const Profiles = require("../data.json")
+    const Items = Profiles.find(item => item.UUID === "wasd333").achivements.split(' ').map(parseFloat)
+    return Items.indexOf(item) != -1
+}
 
 const TextBlock = (props) => {
+    const postID = useContext(IDContext).postID;
+    
+    if (postID == 1) { GiveRevard(0) }
+
     return (
         <div className={"CardBlock"} style={{backgroundColor: props.value.color}}>
             <div className={"CardText"}>
