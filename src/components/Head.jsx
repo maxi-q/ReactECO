@@ -16,7 +16,7 @@ const Head = (props) => {
         >
           <Navbar.Brand>
             <Link
-              to="/MainWindow"
+              to="/StartWindow"
               style={{ textDecoration: "none", color: "black" }}
             >
               ReactECO
@@ -24,11 +24,18 @@ const Head = (props) => {
           </Navbar.Brand>
 
           <NavDropdown title="Link">
-            <NavDropdown.Item href="#action1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action2">Another action</NavDropdown.Item>
+            <NavDropdown.Item><Link to={"/Reviews"}>Отзывы</Link></NavDropdown.Item>
+            <NavDropdown.Item><Link to={"/AboutUs"}>О нас</Link></NavDropdown.Item>
           </NavDropdown>
           <Nav className="me-auto">
-            <Nav.Link href="#start">Старт</Nav.Link>
+            <Nav.Link href="#start">
+              <Link
+                to="/MainWindow"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Старт
+              </Link>
+            </Nav.Link>
           </Nav>
         </Nav>
         <Nav>

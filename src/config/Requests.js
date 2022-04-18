@@ -3,7 +3,10 @@ import React from "react";
 export async function httpPost(name, password, navigate) {
     const options = {
         method: "POST",
-        headers: new Headers({'Content-Type': 'application/json'}),
+        headers: new Headers({
+            'Content-Type': 'application/json',
+            'Origin': 'http://127.0.0.1/SignUP'
+        }),
         body: JSON.stringify({
             'name': name,
             'password': password
@@ -23,7 +26,7 @@ export async function httpGet(URL) {
 
     const options = {
         method: "GET",
-        headers: new Headers({'Content-Type': 'application/json'})
+        headers: new Headers({ 'Content-Type': 'application/json' })
     }
     let response = await fetch(URL, options);
 

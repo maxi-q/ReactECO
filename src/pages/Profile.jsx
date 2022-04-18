@@ -62,14 +62,6 @@ const Profile = () => {
             Достижения: {Profile.achivements.split(" ").length}/42
           </div>
         </Stack>
-        <div className="RevardBlock">
-          <h4>Достижения:</h4>
-          <div className="Revards">
-            <Stack direction="vertical" gap={1}>
-              {Revards}
-            </Stack>
-          </div>
-        </div>
         <div className="HistoryBlock">
           <h4>История:</h4>
           <div className="Histories">
@@ -78,6 +70,15 @@ const Profile = () => {
             </Stack>
           </div>
         </div>
+        <div className="RevardBlock">
+          <h4>Достижения:</h4>
+          <div className="Revards">
+            <Stack direction="vertical" gap={1}>
+              {Revards}
+            </Stack>
+          </div>
+        </div>
+        
       </div>
     </div>
   );
