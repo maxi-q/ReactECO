@@ -24,8 +24,19 @@ const Head = (props) => {
           </Navbar.Brand>
 
           <NavDropdown title="Link">
-            <NavDropdown.Item><Link to={"/Reviews"}>Отзывы</Link></NavDropdown.Item>
-            <NavDropdown.Item><Link to={"/AboutUs"}>О нас</Link></NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to={"/Reviews"}>Отзывы</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to={"/AboutUs"}>О нас</Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item>
+              <Link to={"/Faq"}>FAQ</Link>
+            </NavDropdown.Item>
+            <nav style={{ borderBottom: "solid 1px", margin: "0 9px" }} />
+            <NavDropdown.Item>
+              <Link to={"/CallBack"}>Бонус!</Link>
+            </NavDropdown.Item>
           </NavDropdown>
           <Nav className="me-auto">
             <Nav.Link href="#start">
