@@ -2,10 +2,12 @@ import React from "react";
 import { Image, Stack } from "react-bootstrap";
 import Histori from "../components/Histori";
 import Revard from "../components/Revard";
+import Cookies from 'universal-cookie';
 
 const GetAchivement = (myAchivements) => {
   let a = [];
   const Achivements = require("../achivements.json");
+  
 
   myAchivements.forEach((el) => {
     const Achivement = Achivements.find((item) => item.id === +el);
@@ -46,8 +48,9 @@ const Profile = () => {
     "https://i.pinimg.com/originals/4b/ee/62/4bee62fe59c6c7ff150186a4318e3180.jpg";
   const ava =
     "https://funart.pro/uploads/posts/2021-07/1627167714_14-funart-pro-p-kot-v-pidzhake-zhivotnie-krasivo-foto-17.jpg";
-  const Profiles = require("../data.json");
-  const Profile = Profiles.find((item) => item.UUID === "wasd333");
+  
+  const cookies = new Cookies();
+  const Profile = cookies.get('profile', [true])
 
   const Revards = GetAchivement(Profile.achivements.split(" "));
   const Histories = GetHistories(Profile.unlocked_items.split(" "));

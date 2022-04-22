@@ -5,9 +5,11 @@ import ToCard from "../config/ToCard";
 import { IDContext } from "../hooks/GetPostID";
 import { GetPost } from "../config/GetPost";
 
+
 const MainWindow = () => {
   let navigate = useNavigate();
   const a = useContext(IDContext);
+
 
   return (
     <div>

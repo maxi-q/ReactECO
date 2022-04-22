@@ -1,10 +1,16 @@
-import React from "react";
+import React, {useState, useContext, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Container, Nav, Navbar, NavDropdown, Image } from "react-bootstrap";
+import Cookies from 'universal-cookie';
+import { ProfileContext } from "../hooks/GetProfile";
 
 const Head = (props) => {
-  const Profiles = require("../data.json");
-  const Profile = Profiles.find((item) => item.UUID === "wasd333");
+  const a = useContext(ProfileContext)
+  const cookies = new Cookies()
+  const [profile, setProfile] = useState(cookies.get('profile', [true]))
+  useEffect(() => {
+    setProfile(cookies.get('profile', [true]))
+  }, [a.profile]);
 
   return (
     <Navbar bg="light" variant="light">
@@ -72,7 +78,7 @@ const Head = (props) => {
                     }}
                   >
                     Профиль: <br />
-                    {Profile.name}
+                    {profile.name}
                   </p>
                 </Link>
               </Nav>

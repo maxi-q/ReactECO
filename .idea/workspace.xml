@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3ab615b-b5fb-4d31-944d-51aa66d7cb05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/IntelCore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/IntelCore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Head.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Head.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextBlock.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/Requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/Requests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutUs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutUs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Reviews.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.css" afterDir="false" />
-    </list>
+    <list default="true" id="d3ab615b-b5fb-4d31-944d-51aa66d7cb05" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -28,7 +16,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
+            <state relative-caret-position="4794">
               <caret line="282" column="22" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="22" />
             </state>
           </provider>
@@ -47,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/Head.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
-              <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -134,8 +122,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="73" />
-    <option name="y" value="16" />
+    <option name="x" value="-18" />
+    <option name="y" value="114" />
     <option name="width" value="2336" />
     <option name="height" value="835" />
   </component>
@@ -147,6 +135,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,7 +182,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,6 +296,7 @@
       <workItem from="1650303125915" duration="1245000" />
       <workItem from="1650305009553" duration="1791000" />
       <workItem from="1650306834784" duration="1797000" />
+      <workItem from="1650308649680" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary="я ща этот cors ушатаю">
       <created>1646248178459</created>
@@ -341,7 +330,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128320000" />
+    <option name="totallyTimeSpent" value="128390000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -353,10 +342,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="16" width="2336" height="835" extended-state="0" />
+    <frame x="-18" y="114" width="2336" height="835" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.82024795" visible="true" weight="0.16100958" />
-      <window_info id="Structure" order="1" sideWeight="0.17975207" side_tool="true" visible="true" weight="0.16100958" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8181818" visible="true" weight="0.16100958" />
+      <window_info id="Structure" order="1" sideWeight="0.18181819" side_tool="true" visible="true" weight="0.16100958" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32932165" />
@@ -729,7 +718,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
+        <state relative-caret-position="4794">
           <caret line="282" column="22" selection-start-line="282" selection-start-column="4" selection-end-line="282" selection-end-column="22" />
         </state>
       </provider>
@@ -744,7 +733,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/Head.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
-          <caret line="36" column="21" lean-forward="true" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
         </state>
       </provider>
     </entry>
