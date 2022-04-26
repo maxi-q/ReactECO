@@ -1,9 +1,8 @@
-import React from "react";
 import Cookies from 'universal-cookie';
+import { v5 as uuidv5 } from 'uuid';
+import RegMemory from "./RegMemory";
 
-export async function httpRegistration(name, password, navigate) {
-
-    const cookies = new Cookies();
+export async function httpRegistration(name, password) {
 
     const options = {
         method: "POST",
@@ -18,16 +17,14 @@ export async function httpRegistration(name, password, navigate) {
     };
     let response = await fetch('http://127.0.0.1:5000/debug', options);
     if (response.ok) {
-        let json = await response.json();
-        console.log(json)
+        return await response.json().uuid;
     } else {
-        console.log(await response.status)
+        return response.status
     }
-    navigate('/MainWindow');
 }
 
 export async function httpLogIn(name, password) {
-    const uuid = name + '' + password
+    const uuid = uuidv5(name + password, uuidv5.DNS)
     const options = {
         method: "POST",
         headers: new Headers({
@@ -42,7 +39,7 @@ export async function httpLogIn(name, password) {
     if (response.ok) {
         return await response.json();
     } else {
-        alert("Ошибка HTTP: " + response.status);
+        console.log("Ошибка HTTP: " + response.status);
     }
 }
 export async function httpDelete(uuid) {
@@ -62,7 +59,7 @@ export async function httpDelete(uuid) {
     if (response.ok) {
         return "Ok";
     } else {
-        alert("Ошибка HTTP: " + response.status);
+        console.log("Ошибка HTTP: " + response.status);
     }
 }
 export async function httpFact() {

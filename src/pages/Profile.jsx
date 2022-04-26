@@ -5,23 +5,26 @@ import Revard from "../components/Revard";
 import Cookies from 'universal-cookie';
 
 const GetAchivement = (myAchivements) => {
+
   let a = [];
   const Achivements = require("../achivements.json");
-  
 
   myAchivements.forEach((el) => {
+    if(el !== ""){
     const Achivement = Achivements.find((item) => item.id === +el);
-    a.push(
-      <Revard
-        value={{
-          avatar: Achivement.data.ava,
-          title: Achivement.data.title,
-          body: Achivement.data.body
-        }}
-      />
-    );
+      a.push(
+        <Revard
+          value={{
+            avatar: Achivement.data.ava,
+            title: Achivement.data.title,
+            body: Achivement.data.body
+          }}
+        />
+      );
+    }
   });
-  return a;
+  if (a === []) return
+  else return a;
 };
 
 const GetHistories = (myHistory) => {
@@ -29,7 +32,8 @@ const GetHistories = (myHistory) => {
   const Achivements = require("../items.json");
   myHistory.reverse()
   myHistory.forEach((el) => {
-    const Achivement = Achivements.find((item) => item.id === +el);
+    if(el !== ""){
+      const Achivement = Achivements.find((item) => item.id === +el);
     a.push(
       <Histori
         value={{
@@ -39,6 +43,7 @@ const GetHistories = (myHistory) => {
         }}
       />
     );
+    }
   });
   return a;
 };
@@ -51,6 +56,8 @@ const Profile = () => {
   
   const cookies = new Cookies();
   const Profile = cookies.get('profile', [true])
+
+  console.log(Profile)
 
   const Revards = GetAchivement(Profile.achivements.split(" "));
   const Histories = GetHistories(Profile.unlocked_items.split(" "));

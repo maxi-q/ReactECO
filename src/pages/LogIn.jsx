@@ -6,32 +6,33 @@ import {useNavigate} from "react-router";
 import Cookies from 'universal-cookie';
 import { httpLogIn } from '../config/Requests';
 import { ProfileContext } from '../hooks/GetProfile'
+import { Link } from 'react-router-dom';
 
 
-const LogIn = (props) => {
+const LogIn = () => {
     const a = useContext(ProfileContext)
     const [profile, setProfile] = useState({
         "UUID": "Error",
         "name": "Error",
-        "achivements": "",
+        "achievements": "",
         "friends": "",
-        "unlocked_items": ""
+        "facts": ""
     })
 
     const GetProfile = ( name, password ) => {
-        const profile = {
-                "UUID": password + name,
-                "name": name,
-                "achivements": "1",
-                "friends": "",
-                "unlocked_items": "2"
-            }
-            //httpLogIn(name, password)
-            //    .then(json => {
-            //        setProfile(json)
-            //    })
-    
-        setProfile(profile)
+        // const profile = {
+        //         "UUID": password + name,
+        //         "name": name,
+        //         "achivements": "",
+        //         "friends": "",
+        //         "unlocked_items": ""
+        //     }
+        //     setProfile(profile)
+            
+            httpLogIn(name, password)
+                .then(json => {
+                    setProfile(json)
+                })
     }
 
 
@@ -51,7 +52,6 @@ const LogIn = (props) => {
         setCokies(profile)
         navigate('/StartWindow')
         }
-        
     },[profile])
 
     const [nameError, setNameError] = useState("Имя не может быть пустым");
@@ -87,7 +87,8 @@ const LogIn = (props) => {
         <Card style={{ width: '500px', margin: '10% 0 0 0'}} >
             <Card.Body>
                 <div className="register">
-                    <h1>Вход</h1>
+                    <Link to="/signup"><h1>Вход</h1></Link>
+                    
                     {(nameDirty && nameError) && <div style={{color:'red'}}>{nameError}</div>}
                     <Input inputContent={{value:name, handler: nameHandler, name:"name", blur: setNameDirty, content: "Имя"}}/>
 

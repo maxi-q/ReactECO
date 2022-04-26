@@ -4,6 +4,8 @@ import {httpRegistration} from "../config/Requests";
 import Input from "../components/Input";
 import {emailValid, nameValid, passwordValid, rePasswordValid, rePasswordValidForPassword} from "../config/Validators";
 import {useNavigate} from "react-router";
+import { Link } from 'react-router-dom';
+import RegMemory from "../config/RegMemory";
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -23,6 +25,8 @@ const SignUp = () => {
     const [name, setName] = useState('');
 
     const [formValid, setFormValid] = useState(false);
+    
+    const [uuid, setUuid] = useState('')
 
     let navigate = useNavigate();
 
@@ -54,12 +58,23 @@ const SignUp = () => {
         setNameError(nameValid(e));
     };
 
+    const RegProfile = (name, password, navigate) => {
+        
+        httpRegistration(name, password)
+            .then((uuid) => {
+                setUuid(uuid)
+            })
+        RegMemory({'name': name, 'uuid':uuid})
+        navigate('/StartWindow')
+    }
+
     return (
 
         <Card style={{ width: '500px', margin: '10% 0 0 0'}} >
             <Card.Body>
                 <div className="register">
-                    <h1>Регистрация</h1>
+                    <Link to="/login"><h1>Регистрация</h1></Link>
+                    
                     {(nameDirty && nameError) && <div style={{color:'red'}}>{nameError}</div>}
                     <Input inputContent={{value:name, handler: nameHandler, name:"name", blur: setNameDirty, content: "Имя"}}/>
 
@@ -74,7 +89,7 @@ const SignUp = () => {
                     {(rePasswordDirty && rePasswordError) && <div style={{color:'red'}}>{rePasswordError}</div>}
                     <Input inputContent={{value:rePassword, handler: rePasswordHandler, name:"rePassword", blur: setRePasswordDirty, content: "Повторить пароль"}}/>
 
-                    <Button onClick={() => httpRegistration(name, password, navigate)} disabled={!formValid} className="ButtonRegister" variant="outline-primary">Регистрация</Button>{' '}
+                    <Button onClick={() => RegProfile(name, password, navigate)} disabled={!formValid} className="ButtonRegister" variant="outline-primary">Регистрация</Button>{' '}
                 </div>
             </Card.Body>
         </Card>

@@ -12,6 +12,42 @@ const Head = (props) => {
     setProfile(cookies.get('profile', [true]))
   }, [a.profile]);
 
+  const CheckProfile = () =>{
+    if(profile.UUID === '0'){
+      return(<Link
+        to="/Login"
+        style={{ textDecoration: "none", color: "black" }}
+      >
+        <p
+          style={{
+            fontSize: "13px",
+            lineHeight: "15px",
+            marginBottom: "0px"
+          }}
+        >
+          Профиль: <br />
+          {profile.name}
+        </p>
+      </Link>)
+    } else{
+        return(<Link
+          to="/Profile"
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          <p
+            style={{
+              fontSize: "13px",
+              lineHeight: "15px",
+              marginBottom: "0px"
+            }}
+          >
+            Профиль: <br />
+            {profile.name}
+          </p>
+        </Link>)
+      }
+  }
+ 
   return (
     <Navbar bg="light" variant="light">
       <Container>
@@ -66,21 +102,7 @@ const Head = (props) => {
           <Nav>
             <Navbar>
               <Nav>
-                <Link
-                  to="/Profile"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  <p
-                    style={{
-                      fontSize: "13px",
-                      lineHeight: "15px",
-                      marginBottom: "0px"
-                    }}
-                  >
-                    Профиль: <br />
-                    {profile.name}
-                  </p>
-                </Link>
+                { CheckProfile(profile) }
               </Nav>
             </Navbar>
           </Nav>
