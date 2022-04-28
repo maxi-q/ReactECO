@@ -10,7 +10,7 @@ const ContextGetProfile = (props) => {
     const GetProfile = () => {
         setProfile(cookies.get('profile', [true]))
     }
-
+    
     const value = {
         profile,
         GetProfile

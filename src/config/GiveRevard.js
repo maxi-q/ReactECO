@@ -8,10 +8,11 @@ const CheckItem = (item) => {
     return Items.indexOf(item) != -1
 }
 const AddInProfile = (num) => {
-    const Profiles = require("../data.json")
     const cookies = new Cookies();
     const Profile = cookies.get('profile', [true])
-    Profile.achivements = Profile.achivements + " " + num
+    Profile.achievements += " " + num
+    cookies.set('profile', Profile, [{ path: '/' }])
+    
 }
 const GiveRevard = (revardId) => {
     CheckItem(revardId) ? console.log("достижение уже есть") : AddInProfile(revardId)

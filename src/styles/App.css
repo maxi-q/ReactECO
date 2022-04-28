@@ -188,7 +188,15 @@ a {
   margin-bottom: 0px;
   padding-bottom: 10px;
 }
-
+.FooterProfile {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.DeleteProfileBTN{
+  width: 200px;
+}
 .RevardBlock {
   margin-top: 20px;
   background-color: rgba(202, 149, 60, 0);

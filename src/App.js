@@ -11,7 +11,18 @@ export default function App() {
     const img =
         "https://img2.freepng.ru/20180411/vuw/kisspng-penrose-triangle-isometric-projection-optical-illu-isometric-5acd8b94703078.8028741215234200524595.jpg"
     const cookies = new Cookies();
-    const Profile = cookies.set('profile', { "UUID": "0", "name": "", "achivements": "", "friends": "", "unlocked_items": "" }, { path: '/' })
+    if(typeof (cookies.get('profile', [true])) === "undefined"){
+        const Profile = cookies.set('profile',
+        { 
+            "UUID": "0", 
+            "name": "",
+            "achivements": "", 
+            "friends": "", 
+            "unlocked_items": "" 
+        }, { path: '/' })
+    }
+    
+
     return ( 
         <div className="App">
             <ContextGetPostId>
@@ -28,8 +39,8 @@ export default function App() {
             </nav> 
                 < ContextGetProfile >
                     <Head imageSrc = { img } /> 
-                    <Outlet / > 
-                    <Footer / > 
+                    <Outlet /> 
+                    <Footer /> 
                 </ContextGetProfile> 
             </ContextGetPostId> 
         </div>

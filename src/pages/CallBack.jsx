@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import { Button } from "react-bootstrap";
 
 import { nameValid } from "../config/Validators";
+import { httpCallBack } from "../config/Requests";
 
 const CallBack = () => {
   const [nameError, setNameError] = useState("Имя не может быть пустым");
@@ -24,6 +25,7 @@ const CallBack = () => {
     setNameError(nameValid(e));
   };
 
+
   return (
     <div className="Callback">
       <div className="block">
@@ -42,7 +44,7 @@ const CallBack = () => {
             }}
           />
           <div className="Down">
-            <Button className="Button" variant="outline-primary">
+            <Button onClick={() => httpCallBack(name)} className="Button" variant="outline-primary">
               Получить бонус
             </Button>{" "}
           </div>

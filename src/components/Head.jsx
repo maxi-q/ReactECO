@@ -13,7 +13,7 @@ const Head = (props) => {
   }, [a.profile]);
 
   const CheckProfile = () =>{
-    if(profile.UUID === '0'){
+    if(+profile.UUID === 0){
       return(<Link
         to="/Login"
         style={{ textDecoration: "none", color: "black" }}

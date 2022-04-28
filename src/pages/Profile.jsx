@@ -1,8 +1,12 @@
-import React from "react";
-import { Image, Stack } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Image, Stack, Button } from "react-bootstrap";
 import Histori from "../components/Histori";
 import Revard from "../components/Revard";
 import Cookies from 'universal-cookie';
+import { httpDelete } from "../config/Requests";
+import { useNavigate } from "react-router-dom";
+import { ProfileContext } from "../hooks/GetProfile";
+
 
 const GetAchivement = (myAchivements) => {
 
@@ -48,7 +52,27 @@ const GetHistories = (myHistory) => {
   return a;
 };
 
+const DeleteProfile = (navigate, getprofile) => {
+  
+  const cookies = new Cookies()
+
+  const uuid = cookies.get('profile', [true]).UUID
+  let a = 0
+  //httpDelete(uuid) === 0 ? a = 0 : a = 1
+  if (a === 0){
+    const Profile = cookies.get('profile', [true])
+    Profile.UUID = 0;
+    cookies.set('profile', Profile, { path:"/" })
+  }
+  console.log(cookies.get('profile', [true]))
+  getprofile.GetProfile()
+  navigate('/login')
+}
+
 const Profile = () => {
+  const a = useContext(ProfileContext)
+  const navigate = useNavigate()
+
   const img =
     "https://i.pinimg.com/originals/4b/ee/62/4bee62fe59c6c7ff150186a4318e3180.jpg";
   const ava =
@@ -56,8 +80,6 @@ const Profile = () => {
   
   const cookies = new Cookies();
   const Profile = cookies.get('profile', [true])
-
-  console.log(Profile)
 
   const Revards = GetAchivement(Profile.achivements.split(" "));
   const Histories = GetHistories(Profile.unlocked_items.split(" "));
@@ -87,6 +109,9 @@ const Profile = () => {
               {Revards}
             </Stack>
           </div>
+        </div>
+        <div className="FooterProfile">
+          <Button onClick={() => DeleteProfile(navigate, a)} className="DeleteProfileBTN" variant="outline-danger">Удалить профиль</Button>
         </div>
         
       </div>

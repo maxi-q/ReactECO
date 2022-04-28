@@ -7,41 +7,37 @@ import Cookies from 'universal-cookie';
 import { httpLogIn } from '../config/Requests';
 import { ProfileContext } from '../hooks/GetProfile'
 import { Link } from 'react-router-dom';
+import { v5 as uuidv5 } from 'uuid';
 
 
 const LogIn = () => {
     const a = useContext(ProfileContext)
-    const [profile, setProfile] = useState({
-        "UUID": "Error",
-        "name": "Error",
-        "achievements": "",
-        "friends": "",
-        "facts": ""
-    })
+    const cookies = new Cookies();
+    const [profile, setProfile] = useState(cookies.get('profile', [true]))
+
+    console.log(profile)
 
     const GetProfile = ( name, password ) => {
-        // const profile = {
-        //         "UUID": password + name,
-        //         "name": name,
-        //         "achivements": "",
-        //         "friends": "",
-        //         "unlocked_items": ""
-        //     }
-        //     setProfile(profile)
+        const profile = {
+                "UUID": uuidv5(name + password, uuidv5.DNS),
+                "name": name,
+                "achivements": "",
+                "friends": "",
+                "unlocked_items": ""
+            }
+            setProfile(profile)
             
-            httpLogIn(name, password)
-                .then(json => {
-                    setProfile(json)
-                })
+            //httpLogIn(name, password)
+            //    .then(json => {
+            //        setProfile(json)
+            //    })
     }
 
 
     const navigate = useNavigate();
 
     const setCokies = (profile) => {
-
-        const cookies = new Cookies();
-        cookies.set('profile', profile, { path: '/' });
+        cookies.set('profile', profile, { path: '/', maxAge: 9999 });
         a.GetProfile()
     }
     const firstUpdate = useRef(true);

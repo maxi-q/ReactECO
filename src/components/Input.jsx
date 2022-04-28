@@ -3,7 +3,6 @@ import React from "react";
 
 const Input = (props) => {
 
-    // noinspection JSUnresolvedVariable
     return (
         <div>
             <InputGroup className="mb-3">
