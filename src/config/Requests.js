@@ -1,6 +1,5 @@
 import Cookies from 'universal-cookie';
 import { v5 as uuidv5 } from 'uuid';
-import RegMemory from "./RegMemory";
 
 export async function httpRegistration(name, password) {
 
@@ -15,9 +14,9 @@ export async function httpRegistration(name, password) {
             'password': password
         })
     };
-    let response = await fetch('http://127.0.0.1:5000/debug', options);
+    let response = await fetch('http://127.0.0.2:5000/signUp', options);
     if (response.ok) {
-        return await response.json().uuid;
+        return await response.headers['uuid'];
     } else {
         console.warn("Ошибка HTTP: " + response.status)
     }
@@ -35,9 +34,9 @@ export async function httpLogIn(name, password) {
             'uuid': uuid
         })
     }
-    let response = await fetch('http://127.0.0.1:5000/debug', options);
+    let response = await fetch('http://127.0.0.2:5000/logIn', options);
     if (response.ok) {
-        return await response.json();
+        return await response.headers['info'];
     } else {
         console.warn("Ошибка HTTP: " + response.status);
     }
@@ -53,9 +52,9 @@ export async function httpDelete(uuid) {
             "uuid": uuid
         })
     }
-    let response = await fetch('http://127.0.0.1:5000/debug', options);
+    let response = await fetch('http://127.0.0.2:5000/Profile/delete', options);
     if (response.ok) {
-        return 0;
+        return "Ok";
     } else {
         console.warn("Ошибка HTTP: " + response.status);
     }
@@ -77,7 +76,7 @@ export async function httpFact() {
             'fact': fact
         })
     }
-    let response = await fetch('http://127.0.0.1:5000/debug', options);
+    let response = await fetch('http://127.0.0.2:5000/MainWindow', options);
     if (response.ok) {
         return "Ok";
     } else {
@@ -100,7 +99,7 @@ export async function httpCallBack(code) {
             'telephon': code
         })
     }
-    let response = await fetch('http://127.0.0.1:5000/debug', options);
+    let response = await fetch('http://127.0.0.2:5000/CallBack', options);
     if (response.ok) {
         return "Ok";
     } else {
