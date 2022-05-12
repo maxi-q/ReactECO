@@ -9,7 +9,7 @@ const ContextGetPostId = (props) => {
         return Math.floor(Math.random() * (max - min)) + min;
     }
     const GetPostID = () => {
-        const num = getRandomInt(0, require("../items.json").length - 1)
+        const num = getRandomInt(0, require("../items.json").length)
         console.log(num)
         setPostID(num);
         return num

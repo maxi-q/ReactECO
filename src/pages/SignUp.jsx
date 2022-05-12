@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {Button, Card} from 'react-bootstrap/esm/index';
 import {httpRegistration} from "../config/Requests";
 import Input from "../components/Input";
@@ -38,6 +38,16 @@ const SignUp = () => {
         }
     }, [emailError, passwordError, nameError, rePasswordError]);
 
+    const firstUpdate = useRef(true);
+
+    useEffect(() => {
+        if (firstUpdate.current) {
+            firstUpdate.current = false;
+        } else {
+        navigate('/StartWindow')
+        }
+    }, [ uuid ])
+
     const emailHandler = (e) => {
         setEmail(e.target.value);
         setEmailError(emailValid(e));
@@ -65,7 +75,7 @@ const SignUp = () => {
                 setUuid(uuid)
             })
         RegMemory({'name': name, 'uuid':uuid})
-        navigate('/StartWindow')
+        
     }
 
     return (

@@ -17,6 +17,8 @@ const CardTextBlock = () => {
   return (
     <div>
       <img src={post.post.data.Image} className={"CardImg"} alt="1111" />
+      <div className="CardTitleBox"><h3 className="CardTitle">{ post.post.data.title }</h3></div>
+      
       {a}
     </div>
   );

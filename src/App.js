@@ -6,6 +6,7 @@ import Cookies from 'universal-cookie';
 
 import Footer from "./components/Footer";
 import Head from "./components/Head";
+import { Button } from "react-bootstrap";
 
 export default function App() {
     const img =
@@ -34,8 +35,9 @@ export default function App() {
             }>
             <Link to = "/MainWindow" style = {{ marginLeft: "20px" } } > MainWindow </Link> |{" "} 
             <Link to = "/StartWindow" > StartWindow </Link> |{" "} 
-            <Link to = "/SignUp" > Регистрация </Link> | 
-            <Link to="/logIn">Вход</Link> 
+            <Link to = "/SignUp" > Регистрация </Link> |{" "} 
+            <Link to="/logIn">Вход</Link> |{" "}
+            <Button onClick={()=>{cookies.set('profile',{"UUID": "0","name": "","achivements": "","friends": "","unlocked_items": ""}, { path: '/' })}} style={{'height':"20px", lineHeight:'10px'}}>delete</Button>
             </nav> 
                 < ContextGetProfile >
                     <Head imageSrc = { img } /> 

@@ -93,6 +93,12 @@ a {
   object-position: bottom;
 }
 
+.CardTitleBox {
+  margin-left: 25px;
+}
+.CardTitle {
+  font-size: 40px;
+}
 .CardMainText {
   font-size: 20px;
   font-weight: 40px;
