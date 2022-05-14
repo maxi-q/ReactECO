@@ -8,20 +8,19 @@ import { useNavigate } from "react-router-dom";
 import { ProfileContext } from "../hooks/GetProfile";
 
 
-const GetAchivement = (myAchivements) => {
+const GetAchivement = (myAchievements) => {
 
   let a = [];
-  const Achivements = require("../achivements.json");
 
-  myAchivements.forEach((el) => {
+  myAchievements.forEach((el) => {
     if(el !== ""){
-    const Achivement = Achivements.find((item) => item.id === +el);
+    const achievements = require("../achivements.json").find((item) => item.id === +el);
       a.push(
         <Revard
           value={{
-            avatar: Achivement.data.ava,
-            title: Achivement.data.title,
-            body: Achivement.data.body
+            avatar: achievements.data.ava,
+            title: achievements.data.title,
+            body: achievements.data.body
           }}
         />
       );
@@ -81,8 +80,8 @@ const Profile = () => {
   const cookies = new Cookies();
   const Profile = cookies.get('profile', [true])
 
-  const Revards = GetAchivement(Profile.achivements.split(" "));
-  const Histories = GetHistories(Profile.unlocked_items.split(" "));
+  const Revards = GetAchivement(Profile.achievements.split(" "));
+  const Histories = GetHistories(Profile.facts.split(" "));
   return (
     <div>
       <Image src={img} className="ProfileImage" />
@@ -91,7 +90,7 @@ const Profile = () => {
           <Image src={ava} className="Avatar" />
           <div className="NameProfile">
             <h3>{Profile.name}</h3>
-            Достижения: {Profile.achivements.split(" ").length}/42
+            Достижения: {Profile.achievements.split(" ").length}/42
           </div>
         </Stack>
         <div className="HistoryBlock">

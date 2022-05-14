@@ -7,7 +7,6 @@ import Cookies from 'universal-cookie';
 import { httpLogIn } from '../config/Requests';
 import { ProfileContext } from '../hooks/GetProfile'
 import { Link } from 'react-router-dom';
-import { v5 as uuidv5 } from 'uuid';
 
 
 const LogIn = () => {
@@ -15,22 +14,25 @@ const LogIn = () => {
     const cookies = new Cookies();
     const [profile, setProfile] = useState(cookies.get('profile', [true]))
 
+    const profileContext = useContext(ProfileContext)
+
     console.log(profile)
 
     const GetProfile = ( name, password ) => {
-        const profile = {
-                "UUID": uuidv5(name + password, uuidv5.DNS),
-                "name": name,
-                "achivements": "",
-                "friends": "",
-                "unlocked_items": ""
-            }
-            setProfile(profile)
+        //const profile = {
+        //        "UUID": uuidv5(name + password, uuidv5.DNS),
+        //        "name": name,
+        //        "achivements": "",
+        //        "friends": "",
+        //        "unlocked_items": ""
+        //    }
+        //    setProfile(profile)
             
-            //httpLogIn(name, password)
-            //    .then(json => {
-            //        setProfile(json)
-            //    })
+            httpLogIn(name, password)
+                .then(json => {
+                    setProfile(json)
+                    profileContext.GetProfile()
+                })
     }
 
 

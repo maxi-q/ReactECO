@@ -14,12 +14,12 @@ export async function httpRegistration(name, password) {
             'password': password
         })
     };
-    let response = await fetch('http://127.0.0.2:5000/signUp', options);
-    if (response.ok) {
-        return await response.headers['uuid'];
-    } else {
-        console.warn("Ошибка HTTP: " + response.status)
-    }
+    await fetch('http://127.0.0.2:5000/signUp', options)
+        .catch((err) => {
+            console.log(err.status)
+        })
+        
+        
 }
 
 export async function httpLogIn(name, password) {
@@ -34,12 +34,10 @@ export async function httpLogIn(name, password) {
             'uuid': uuid
         })
     }
-    let response = await fetch('http://127.0.0.2:5000/logIn', options);
-    if (response.ok) {
-        return await response.headers['info'];
-    } else {
-        console.warn("Ошибка HTTP: " + response.status);
-    }
+    await await fetch('http://127.0.0.2:5000/logIn', options)
+    .catch((err) => {
+        console.log(err.status)
+    })
 }
 export async function httpDelete(uuid) {
     const options = {

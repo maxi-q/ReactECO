@@ -5,7 +5,7 @@ const RegMemory = (data) => {
     const json = {
         "UUID": data.uuid,
         "name": data.name,
-        "achievements": "",
+        "achievements": "1",
         "friends": "",
         "facts": ""
     }

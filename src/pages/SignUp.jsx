@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import {Button, Card} from 'react-bootstrap/esm/index';
 import {httpRegistration} from "../config/Requests";
 import Input from "../components/Input";
@@ -6,6 +6,7 @@ import {emailValid, nameValid, passwordValid, rePasswordValid, rePasswordValidFo
 import {useNavigate} from "react-router";
 import { Link } from 'react-router-dom';
 import RegMemory from "../config/RegMemory";
+import { ProfileContext } from '../hooks/GetProfile'
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -26,7 +27,7 @@ const SignUp = () => {
 
     const [formValid, setFormValid] = useState(false);
     
-    const [uuid, setUuid] = useState('')
+    const profileContext = useContext(ProfileContext)
 
     let navigate = useNavigate();
 
@@ -37,16 +38,6 @@ const SignUp = () => {
             setFormValid(true)
         }
     }, [emailError, passwordError, nameError, rePasswordError]);
-
-    const firstUpdate = useRef(true);
-
-    useEffect(() => {
-        if (firstUpdate.current) {
-            firstUpdate.current = false;
-        } else {
-        navigate('/StartWindow')
-        }
-    }, [ uuid ])
 
     const emailHandler = (e) => {
         setEmail(e.target.value);
@@ -72,10 +63,14 @@ const SignUp = () => {
         
         httpRegistration(name, password)
             .then((uuid) => {
-                setUuid(uuid)
+                RegMemory({'name': name, 'uuid':uuid})
+                navigate('/StartWindow')
+                profileContext.GetProfile()
             })
-        RegMemory({'name': name, 'uuid':uuid})
-        
+            .catch((err)=>{
+                console.error(err);
+            })
+            
     }
 
     return (
