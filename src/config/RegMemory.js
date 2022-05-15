@@ -2,6 +2,7 @@ import Cookies from "universal-cookie";
 
 const RegMemory = (data) => {
     const cookie = new Cookies()
+    
     const json = {
         "UUID": data.uuid,
         "name": data.name,

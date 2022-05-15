@@ -80,6 +80,8 @@ const Profile = () => {
   const cookies = new Cookies();
   const Profile = cookies.get('profile', [true])
 
+  console.log(Profile)
+
   const Revards = GetAchivement(Profile.achievements.split(" "));
   const Histories = GetHistories(Profile.facts.split(" "));
   return (

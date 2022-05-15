@@ -16,7 +16,7 @@ const LogIn = () => {
 
     const profileContext = useContext(ProfileContext)
 
-    console.log(profile)
+    
 
     const GetProfile = ( name, password ) => {
         //const profile = {

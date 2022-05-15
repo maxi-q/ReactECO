@@ -62,9 +62,9 @@ const SignUp = () => {
     const RegProfile = (name, password, navigate) => {
         
         httpRegistration(name, password)
-            .then((uuid) => {
-                RegMemory({'name': name, 'uuid':uuid})
-                navigate('/StartWindow')
+            .then((json) => {
+                RegMemory({'name': name, 'uuid':json})
+                //navigate('/StartWindow')
                 profileContext.GetProfile()
             })
             .catch((err)=>{

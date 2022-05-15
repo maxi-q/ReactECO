@@ -15,8 +15,13 @@ export async function httpRegistration(name, password) {
         })
     };
     await fetch('http://127.0.0.2:5000/signUp', options)
+        .then((json) => {
+            console.log(json.status)
+            console.log(json)
+            console.log(json.headers.get('uuid'))
+        })
         .catch((err) => {
-            console.log(err.status)
+            console.log(err)
         })
         
         
